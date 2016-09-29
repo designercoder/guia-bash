@@ -12,19 +12,17 @@ published: true
 
 
 <section>
-    <h1>What are bash commands and how do I write and issue them?</h1>
+    <h1>¿Qué son los comandos bash y cómo los escribo y emito?</h1>
 
-    <p>We learned a great deal about how bash and other processes work together in the terminal.  Let's refocus on bash and start figuring out how exactly we get stuff done with it.</p>
+    <p>Aprendimos mucho sobre cómo bash y otros procesos trabajan juntos en la terminal. Regresemos nuestra atención a bash y comencemos a descifrar cómo logramos exactamente hacer cosas con él.</p>
 
-    <p>As mentioned earlier, bash waits for instructions from you and then executes them to the best of its abilities.  To get the most out of bash, and especially to avoid damage due to bash misunderstanding your intentions, it's important that you pay close attention to these basics of the bash shell language.  There are many people that consider themselves fluent in bash but fail to understand even these most basic concepts.  As a result, they create programs that can inflict
-    extensive damage to unsuspecting users and systems.  <em>Don't be that person</em>.</p>
+    <p>Como mencioné antes, bash espera por tus instrucciones y luego las ejecuta en la medida de lo posible. Para sacar el máximo provecho de bash, y especialmente para evitar daños debido a que bash malinterprete tus intenciones, es importante que prestes mucha atención a estos fundamentos del lenguaje de shell bash. Hay muchas personas que se consideran a sí mismas fluidas en bash pero que fallan en comprender incluso estos conceptos más básicos. Como resultado, crean programas que pueden inflingir daño extensivo a usuarios y sistemas desprevenidos. <em>No seas esa persona.</p>
 
-    <h2>So what are bash commands?</h2>
+    <h2>Entonces, ¿Qué son los comandos bash?</h2>
 
-    <p>At the core of the bash shell language are its commands.  Your commands tell bash what you need it to do, step-by-step, command-by-command.</p>
+    <p>En el núcleo del lenguaje de shell bash están sus comandos. Tus comandos le dicen a bash qué necesitas que haga, paso por paso, comando por comando.</p>
 
-    <p>Bash generally takes one command from you at a time, executes the command, and when completed returns to you for the next command.  We call this <dfn>synchronous</dfn> command execution.  It is important to understand that while bash is busy with a command that you give it, there is no way for you to interact with bash: you'll have to wait for bash to get back to you after its job is done.  For most commands, you'll barely notice this: they get executed so fast bash
-    will be back for the next command before you realize.</p>
+    <p>Bash generalmente toma de ti un comando a la vez, ejecuta el comando, y cuando es completado retorna a ti por el siguiente comando. LLámamos a esto una ejecución de comandos <dfn>síncrona</dfn>. Es importante comprender que mientras bash está ocupado con un comando que le das, no hay forma que puedas interactúar con él: tendrás que esperar que bash regrese a ti después que su trabajo sea realizado. Con la mayoría de los comandos, apenas notarás esto: se ejecutarán tan rápidos que bash volverá por el siguiente antes que te des cuenta.</p>
 
     <p>Some commands can take a long time to complete, though.  In particular, commands that start other programs with which you can interact.  For instance, a command might start a file editor.  While you're interacting with the file editor, bash takes a back-seat and waits for the file editor to end (which generally means you quit it). When the file editor program stops running, the command ends and bash resumes operation by
     asking you for the next thing to do.  You'll notice that while your editor is running, you are no longer at the bash prompt.  As soon as your editor exits, your bash prompt re-appears:</p>
