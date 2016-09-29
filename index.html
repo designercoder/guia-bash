@@ -26,7 +26,7 @@ editable: false
         {% for page in site.pages %}
             {% if page.layout == 'chapter' %}
             <li><label for="done_{{ page.id }}"><input type="checkbox" id="done_{{ page.id }}"> I'm done</label>
-                <a href="guia-bash/{{ page.url }}">{{ page.title }}</a><sup>{{ page.status }}</sup>: {{ page.subtitle }}
+                <a href=".{{ page.url }}">{{ page.title }}</a><sup>{{ page.status }}</sup>: {{ page.subtitle }}
                 <p>{{ page.description }}</p></li>
             {% endif %}
         {% endfor %}
